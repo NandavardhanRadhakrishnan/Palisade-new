@@ -40,7 +40,7 @@ def llmApproach(user_prompt):
         else:
             # Handle cases where "injection" key is not in the response
             print("Error: 'injection' key not found in response.")
-            return None
+            return True
 
     except (json.JSONDecodeError, KeyError, IndexError, AttributeError) as e:
         # Handle errors such as malformed JSON or unexpected response structure

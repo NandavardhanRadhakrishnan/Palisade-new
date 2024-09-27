@@ -8,7 +8,7 @@ ruleScore = calculate_score(prompt)
 llmBool = llmApproach(prompt)
 mlBool = mlApproach(prompt)
 
-if (mlBool or llmBool) and (ruleScore > 0):
+if (mlBool or llmBool) or (ruleScore > 0):
     print("prompt is injected")
 else:
     print("prompt is not injected")
